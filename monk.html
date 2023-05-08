@@ -5,47 +5,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IVIN</title>
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <!--Header-->
-  <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
-      <div class="container">
-        <a href="index.html" class="logo">
-          <img src="img/logo.png" alt=""> <span>International Voleenters In Nepal</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span><i class="bi bi-list"></i></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link " href="index.html#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#about">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#program">Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#contact">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow sticky-top" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo" id="logo">
+        <img src="img/logo.png" alt=""> <span>International Voleenters In Nepal</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="bi bi-list"></i></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About Us</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle active " href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Programs
+            </a>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item" href="child.html">Child Care Project</a></li>
+              <li><a class="dropdown-item active" href="#">Monk And Nun Teaching</a></li>
+              <li><a class="dropdown-item" href="woman.html">Woman Empowerment Project</a></li>
+              <li><a class="dropdown-item" href="orphanage.html">Orphanage And Disable Home Project</a></li>
+              <li><a class="dropdown-item" href="teaching.html">Teaching</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact Us</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  <!--Header end-->
+    </div>
+  </nav>
+  <!--Nav end-->
 
-  <section id="monk" >
+  <section id="monk" class="pro animate__animated animate__fadeIn" >
     <div class="container sp ">
-      <h3 style="text-align: center;">Monk And Nun Teaching</h3>
+      <h3 style="text-align: center;"><span class="tbor">Monk And Nun Teaching</span></h3>
       <div class="row d-flex flex-row-reverse cont">
         <div class="col-lg-4 ">
           <img src="img/Program/monk.jpg" alt="">
@@ -128,6 +139,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
