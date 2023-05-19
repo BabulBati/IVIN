@@ -1,7 +1,7 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction(){
-    if (document.documentElement.scrollTop > 10) {
+    if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
         document.getElementById("navbar").style.padding = "2px 0px";
         document.getElementById("logo").style.fontSize = "16px";
       } else {
