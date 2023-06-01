@@ -14,17 +14,17 @@ h1,
 h2 {
     color: $h1color;
     font-weight: 700;
-    padding: 30px 0;
     font-size: 46px;
+    padding: 10px 0 20px 0;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
 }
-    
+
 h3,
 h4,
 h5 {
     color: $h2color;
-    padding: 20px 0 0;
+    padding-top: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -37,39 +37,58 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 .navbar {
     background-color: #fff;
+    transition: .2s;
+
+    .logo {
+        transition: .2s;
+    }
+
     img {
         width: 40px;
         height: 40px;
+    }
+
+    .navbar-collapse {
+        padding: 5px 0px;
+        text-align: center;
     }
 
     .nav-link {
         color: $h2color;
         font-weight: 600;
         text-transform: uppercase;
+        border-radius: 30px;
+
+        &:hover {
+            color: $h1color !important;
+        }
     }
 
-    .nav-link:hover,
+    .dropdown-item {
+        font-size: 14px;
+        padding: 3px 5px;
+        color: $h2color;
+        background-color: white;
+
+        &:hover {
+            color: $h1color;
+        }
+    }
+
     .active {
         color: $h1color !important;
-    }
-    .dropdown-item{
-        font-size: 14px;
-        color: $h2color;
-    }
-    .dropdown-item:hover,.active{
-        color: $h1color;
-        background-color: #fff !important;
+        background: $h2color;
+        border-radius: 30px;
     }
 
 }
 
-
 section {
-    padding: 30px 0px 3px 0px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(244, 244, 244, 0.7) 70%);
-    box-shadow: 2px 2px 5px #000;
+    padding: 30px 0 60px 0;
 
 }
 
@@ -80,6 +99,7 @@ section {
     background-position: center;
     background-attachment: fixed;
     position: relative;
+    margin-bottom: 30px;
 
     &::after {
         content: "";
@@ -112,34 +132,111 @@ section {
 }
 
 #about {
+    background-color: rgba(250, 250, 250, 0.7);
+}
+
+#ourteam {
+    background-color: rgba(255, 255, 255, 1);
+    h3{
+        padding: 0px;
+    }
     .team {
-        padding: 5px 15px;
-        img {
-            
-            padding: 5px;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+
+        .teambox {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px #000;
+
+            .more {
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: white;
+                background-color: $h2color;
+                border: none;
+
+                &:hover {
+                    background-color: $h1color;
+                }
+            }
+
+            .bi {
+                font-size: 20px;
+            }
+
+            .bi-facebook {
+                color: #3b5998
+            }
+
+            .bi-linkedin {
+                color: #0072b1;
+            }
+
+            .bi-instagram {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                color: #fff;
+                padding: 0 1px;
+                border-radius:  5px;
+            }
         }
+
+        .team-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 1px 2px 4px #000;
+            padding: 1px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 24px;
+            padding: 0px;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgb(150, 150, 150);
+        }
+        p{
+            margin: 15px 0;
+        }
+
     }
 }
 
-#program{
-    .card{
+#program {
+    background-color: rgba(250, 250, 250, 0.7);
+
+    .card {
         margin-top: 5px;
         text-align: center;
-        p{
+
+        p {
             text-align: justify;
             padding: 0px 30px;
         }
-        a{
+
+        a {
             color: $h1color;
+
+            &:hover {
+                color: $h2color;
+            }
         }
-        img{
+
+        img {
             padding: 5px;
             height: 300px;
             width: 300px;
         }
     }
-    
-    
 }
 
 #contact {
@@ -155,7 +252,7 @@ section {
     }
 
     .bi-facebook {
-        color: blue;
+        color: #3b5998;
     }
 }
 
@@ -187,7 +284,7 @@ footer {
 
 .tbor {
     border-bottom: 3px solid $h2color;
-    
+
 }
 
 .cont {
@@ -204,6 +301,65 @@ footer {
     }
 }
 
-.bb{
+#teams{
+    .t-img{
+        padding: 10px ;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        padding: 1px;
+        border-radius: 5px;
+    }
+    .row{
+        margin: 5px 0;
+        padding: 10px 0px;
+        box-shadow: 2px 1px 5px #000;
+        border-radius: 10px;
+    }
+    h3{
+        color: $h1color;
+        font-size: 42px;
+        font-weight: 600;
+        padding-bottom: 60px;
+    }
+    .t-disc{
+        padding: 10px 30px;
+        h4{
+            padding-top: 0px;
+            text-align: center;
+        }
+        p{
+            padding-top: 10px;
+            text-align: justify;
+        }
+        span {
+            font-size: 18px;
+            font-weight: 500; 
+            color: rgb(150, 150, 150);
+        }
+        .bi {
+            font-size: 20px;
+        }
+
+        .bi-facebook {
+            color: #3b5998
+        }
+
+        .bi-linkedin {
+            color: #0072b1;
+        }
+
+        .bi-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            color: #fff;
+            padding: 0 1px;
+            border-radius:  5px;
+        }
+    }
+    
+}
+
+.b{
     border: 1px solid #000;
 }
